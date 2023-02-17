@@ -9,7 +9,7 @@ import { RodapeComponent } from './componentes/rodape/rodape.component';
   declarations: [
     AppComponent,
     CabecalhoComponent,
-    RodapeComponent
+    RodapeComponent,
   ],
   imports: [
     BrowserModule
