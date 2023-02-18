@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-pensamento',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pensamento.component.css'],
 })
 export class PensamentoComponent implements OnInit {
-  pensamento = {
+
+  @Input() pensamento = { // o Decorator @Input diz pro angular que agora esse componente irá receber informações do componente pai 'listarPensamento'
     conteudo: 'I love Angular',
     autoria: 'Nay',
     modelo: 'modelo3'
