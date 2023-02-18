@@ -17,6 +17,11 @@ export class ListarPensamentoComponent implements OnInit {
       autoria: 'Componente filho',
       modelo: 'modelo3',
     },
+    {
+      conteudo: 'Ela era bruxa, ele era um lobo. Ambos prontos para amar. Ela tão clara, ele tão escuro. Ambos em busca de se encontrar. Ele corria, e ela fugia. A noite ele aparecia com seu uivo dolorido. E ela surgia a iluminar a noite com o luar. A bruxa era vida e o Lobo o destino. Ambos seguiam pro mesmo lugar.',
+      autoria: 'Texto > 256 caracteres',
+      modelo: 'modelo2',
+    },
   ];
 
   constructor() {}
