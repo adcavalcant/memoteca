@@ -1,6 +1,7 @@
 import { Pensamento } from './../../componentes/pensamentos/pensamento';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   // Decorator responsável por sinalizar pro Angular que essa classe é injetável.
@@ -10,7 +11,18 @@ export class PensamentoService {
   private readonly API = 'http://localhost:3000/pensamentos';
 
   constructor(private http: HttpClient) {}
-  listar() {
-    return this.http.get<Pensamento[]>(this.API)
+
+  listar(): Observable<Pensamento[]> {
+    return this.http.get<Pensamento[]>(this.API);
   }
+
+  criar(pensamento: Pensamento): Observable<Pensamento> {
+    return this.http.post<Pensamento>(this.API, pensamento);
+  }
+
+  excluir(pensamento: Pensamento, id: Number) {
+
+  }
+
+  editar() {}
 }
