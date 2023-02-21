@@ -1,4 +1,4 @@
-import { PensamentoService } from './../../../components/pensamentos/pensamento.service';
+import { PensamentoService } from '../pensamento.service';
 import { Pensamento } from './../pensamento';
 import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
