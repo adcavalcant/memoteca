@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarPensamentoComponent implements OnInit {
   pensamento: Pensamento = {
-    id: 0,
+    _id: '',
     conteudo: '',
     autoria: '',
     modelo: '',
@@ -22,8 +22,8 @@ export class EditarPensamentoComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-    this.service.buscarPorId(parseInt(id!)).subscribe((pensamento) => {
+    const _id = this.route.snapshot.paramMap.get('_id') || '';
+    this.service.buscarPorId(_id).subscribe((pensamento) => {
       this.pensamento = pensamento;
     });
   }

@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExcluirPensamentoComponent implements OnInit {
   pensamento: Pensamento = {
-    id: 0,
+    _id: '',
     conteudo: '',
     autoria: '',
     modelo: '',
@@ -23,14 +23,14 @@ export class ExcluirPensamentoComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-    this.service.buscarPorId(parseInt(id!)).subscribe((pensamento) => {
+    const _id = this.route.snapshot.paramMap.get('_id') || '';
+    this.service.buscarPorId(_id).subscribe((pensamento) => {
       this.pensamento = pensamento;
     });
   }
   excluirPensamento() {
-    if (this.pensamento.id) {
-      this.service.excluir(this.pensamento.id).subscribe(() => {
+    if (this.pensamento._id) {
+      this.service.excluir(this.pensamento._id).subscribe(() => {
         this.router.navigate(['listarPensamento']);
       });
     }

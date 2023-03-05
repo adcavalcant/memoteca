@@ -21,17 +21,17 @@ export class PensamentoService {
   }
 
   editar(pensamento: Pensamento): Observable<Pensamento> {
-    const url = `${this.API}/${pensamento.id}`;
+    const url = `${this.API}/${pensamento._id}`;
     return this.http.put<Pensamento>(url, pensamento);
   }
 
-  excluir(id: number): Observable<Pensamento> {
-    const url = `${this.API}/${id}`;
+  excluir(_id: string): Observable<Pensamento> {
+    const url = `${this.API}/${_id}`;
     return this.http.delete<Pensamento>(url);
   }
 
-  buscarPorId(id: number): Observable<Pensamento> {
-    const url = `${this.API}/${id}`;
+  buscarPorId(_id: string): Observable<Pensamento> {
+    const url = `${this.API}/${_id}`;
     return this.http.get<Pensamento>(url);
   }
 }

@@ -10,8 +10,8 @@ const routes: Routes = [
   { path: '', redirectTo: 'listarPensamento', pathMatch: 'full' },
   { path: 'listarPensamento', component: ListarPensamentoComponent },
   { path: 'criarPensamento', component: CriarPensamentoComponent },
-  { path: 'pensamentos/excluirPensamento/:id', component: ExcluirPensamentoComponent},
-  { path: 'pensamentos/editarPensamento/:id', component: EditarPensamentoComponent}
+  { path: 'pensamentos/excluirPensamento/:_id', component: ExcluirPensamentoComponent},
+  { path: 'pensamentos/editarPensamento/:_id', component: EditarPensamentoComponent}
 ];
 
 @NgModule({

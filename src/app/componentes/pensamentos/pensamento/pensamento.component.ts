@@ -9,7 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class PensamentoComponent implements OnInit {
 
   @Input() pensamento: Pensamento = { // o Decorator @Input diz pro angular que agora esse componente irá receber informações do componente pai 'listarPensamento'
-    id: 0,
+    _id: '',
     conteudo: 'I love Angular',
     autoria: 'Nay',
     modelo: 'modelo3'
