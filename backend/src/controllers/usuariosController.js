@@ -80,5 +80,15 @@ class UsuariosController {
       });
     }
   };
+  static testeRotaPrivadaComToken = async (req, res) => {
+    const id = req.params.id;
+    //check if user exists
+    const user = await usuarios.findById(id, "-password");
+    if (!user) {
+      return res.status(404).json({ msg: "Usuário não encontrado" });
+    }
+    return res.status(200).json({ user });
+  };
 }
+
 export default UsuariosController;
