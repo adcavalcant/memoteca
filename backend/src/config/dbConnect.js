@@ -3,6 +3,10 @@ import dotenv from "dotenv";
 dotenv.config();
 
 //Credenciais do banco vindas do .env
+/*
+    DB_USER=usuario
+    DB_PASS=senha-do-mongo
+*/
 const dbUser = process.env.DB_USER;
 const dbPass = process.env.DB_PASS;
 
