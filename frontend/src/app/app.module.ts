@@ -30,7 +30,13 @@ import { EditarPensamentoComponent } from '../app/componentes/pensamentos/editar
     ExcluirPensamentoComponent,
     EditarPensamentoComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

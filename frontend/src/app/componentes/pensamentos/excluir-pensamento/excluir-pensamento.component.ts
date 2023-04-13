@@ -32,11 +32,12 @@ export class ExcluirPensamentoComponent implements OnInit {
     if (this.pensamento._id) {
       this.service.excluir(this.pensamento._id).subscribe(() => {
         this.router.navigate(['listarPensamento']);
+        console.log('entrou no excluirPensamento caralhoooo');
       });
     }
   }
 
   cancelar() {
-    this.router.navigate(['/listarPensamento'])
+    this.router.navigate(['/listarPensamento']);
   }
 }

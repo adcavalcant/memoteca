@@ -6,6 +6,7 @@ dotenv.config();
 /*
     DB_USER=usuario
     DB_PASS=senha-do-mongo
+    SECRET=
 */
 const dbUser = process.env.DB_USER;
 const dbPass = process.env.DB_PASS;
